@@ -3,7 +3,7 @@
 [Light]
 </p>
 
-> Why a "light" version? Cesium project has grown quite big. Including a complex build system, loads of clutter like IDE settings, strange casings, slow build system and many dependencies. This forks tries to improve these issues.
+> Why a "light" version? Cesium project has grown quite big. Including a complex build system, loads of clutter, strange folder structure and many dependencies. This forks tries to improve these issues and create a smaller and more performant bundle.
 
 # Goal
 Goal of this repository is to improve the cleaness of the Cesium project.
