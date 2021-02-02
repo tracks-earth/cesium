@@ -3,27 +3,27 @@
 /*global gallery_demos, has_new_gallery_demos, hello_world_index, VERSION*/ // defined in gallery/gallery-index.js, created by build
 /*global sandcastleJsHintOptions*/ // defined by jsHintOptions.js, created by build
 require({
-  baseUrl: "../../Source",
+  baseUrl: "/Apps/Sandcastle",
   packages: [
     {
       name: "dojo",
-      location: "../ThirdParty/dojo-release-1.10.4/dojo",
+      location: "./ThirdParty/dojo-release-1.10.4/dojo",
     },
     {
       name: "dijit",
-      location: "../ThirdParty/dojo-release-1.10.4/dijit",
+      location: "./ThirdParty/dojo-release-1.10.4/dijit",
     },
     {
       name: "Sandcastle",
-      location: "../Apps/Sandcastle",
+      location: "./",
     },
     {
       name: "CodeMirror",
-      location: "../ThirdParty/codemirror-5.52.0",
+      location: "./ThirdParty/codemirror-5.52.0",
     },
     {
       name: "ThirdParty",
-      location: "../Apps/Sandcastle/ThirdParty",
+      location: "./ThirdParty",
     },
   ],
 }, [
