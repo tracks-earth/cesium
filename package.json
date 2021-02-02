@@ -51,7 +51,9 @@
   "scripts": {
     "serve": "npx browser-sync --watch",
     "start": "node server.cjs",
-    "build": "npx rollup --format=umd --name Cesium --file=dist/cesium.js -- Source/Cesium.js",
+    "build": "npm run build:bundle && npm run build:copy",
+    "build:copy": "cp -R Source/Workers dist/workers && mkdir dist/widgets && cp -R Source/Widgets/Images dist/widgets/images && cp -R Source/Assets dist/assets",
+    "build:bundle": "npx rollup --format=umd --name Cesium --file=dist/cesium.js -- Source/Cesium.js",
     "build:css": "npx postcss Source/Widgets/widgets.css -o dist/widgets.css -u postcss-import"
   }
 }
