@@ -24,7 +24,9 @@ Goal of this repository is to improve the cleaness of the Cesium project.
 - [ ] Cleaner folder structure: /dist, /docs, /src, /examples
 
 # Usage
-TODO
+```sh
+npm i @tracks/cesium
+```
 
 # Examples
 HelloWorld [ES6 source](/apps/helloworld-src.html ':ignore') or [build version](/apps/helloworld.html ':ignore')
