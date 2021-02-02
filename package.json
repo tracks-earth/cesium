@@ -36,14 +36,18 @@
     "postcss-import": "^14.0.0",
     "rollup": "^2.38.4",
     "rollup-plugin-external-globals": "^0.6.1",
-    "rollup-plugin-strip-pragma": "^1.0.0"
+    "rollup-plugin-strip-pragma": "^1.0.0",
+    "rollup-plugin-visualizer": "^4.2.0"
   },
   "scripts": {
+    "start": "npm run serve",
     "serve": "npx browser-sync --watch",
-    "start": "node server.cjs",
-    "build": "npm run build:bundle && npm run build:copy",
-    "build:copy": "cp -R Source/Workers dist/workers && mkdir dist/widgets && cp -R Source/Widgets/Images dist/widgets/images && cp -R Source/Assets dist/assets",
+    "build": "npm run build:bundle && npm run build:copy && npm run build:minify",
+    "build:copy": "cp -R Source/Workers/ dist/workers/ && mkdir -p dist/widgets && cp -R Source/Widgets/Images/ dist/widgets/images/ && cp -R Source/Assets/ dist/assets/",
     "build:bundle": "npx rollup --format=umd --name Cesium --file=dist/cesium.js -- Source/Cesium.js",
-    "build:css": "npx postcss Source/Widgets/widgets.css -o dist/widgets.css -u postcss-import"
+    "build:minify": "npx terser --comments /$^/ --compress --mangle -- dist/cesium.js > dist/cesium.min.js",
+    "build:css": "npx postcss Source/Widgets/widgets.css -o dist/widgets.css -u postcss-import",
+    "stats": "ls -lsh dist/",
+    "build:stats": "npx rollup --plugin rollup-plugin-visualizer --format=umd --name Cesium --file=dist/cesium.js -- Source/Cesium.js"
   }
 }
