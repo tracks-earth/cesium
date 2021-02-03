@@ -4,9 +4,6 @@ window.CESIUM_BASE_URL = "../../../Source/";
 import * as Cesium from "../../Source/Cesium.js";
 window.Cesium = Cesium;
 
-import "./ThirdParty/knockout-3.5.1.js"
-
-
 // Since ES6 modules have no guaranteed load order,
 // only call startup if it's already defined but hasn't been called yet
 if (!window.startupCalled && typeof window.startup === "function") {
