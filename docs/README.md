@@ -15,6 +15,7 @@ Goal of this repository is to improve the cleaness of the Cesium project.
 - [x] Major improvements to build setup ( removed whole gulp pipeline )
 - [x] Removed all IDE specific code
 - [x] Converted documentation to Docsify
+- [ ] Less dependencies ( knockout, ... )
 - [ ] Compiling of shaders ( https://www.npmjs.com/package/rollup-plugin-glslify )
 - [ ] Add minified build script
 - [ ] Add rollup watch modus script
