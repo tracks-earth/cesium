@@ -205,7 +205,7 @@ require({
 
   xhr
     .get({
-      url: "../../Build/Documentation/types.txt",
+      url: "types.json",
       handleAs: "json",
       error: function (error) {
         docError = true;
